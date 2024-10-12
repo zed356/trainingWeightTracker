@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { View, Text, TextInput, StyleSheet, Pressable } from "react-native";
-import Animated, { useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
+import { View, Text, TextInput, StyleSheet } from "react-native";
 import AnimatedButton from "./AnimatedButton";
 
 interface InputProps {
