@@ -19,9 +19,11 @@ const ExerciseList: React.FC<InputPropsArray> = ({ name, options }) => {
       alignItems: "center",
       borderWidth: 1,
       marginTop: 20,
+      backgroundColor: "#e3e3e3",
     },
     header: {
       fontSize: 20,
+      textDecorationLine: "underline",
     },
   });
   return (

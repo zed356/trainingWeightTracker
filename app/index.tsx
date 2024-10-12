@@ -8,8 +8,10 @@ export default function HomeScreen() {
       flex: 1,
       justifyContent: "center",
       alignItems: "center",
+      alignSelf: "center",
       marginTop: 30,
       marginBottom: 30,
+      maxWidth: "70%",
     },
   });
 

@@ -24,8 +24,19 @@ const Exercise: React.FC<InputProps> = ({ name, increase }) => {
   // styles
 
   const styles = StyleSheet.create({
-    container: { flex: 1, flexDirection: "row", justifyContent: "center", alignItems: "center" },
-    name: { marginRight: 20 },
+    container: {
+      flex: 1,
+      flexDirection: "row",
+      alignItems: "center",
+      padding: 10,
+      width: "100%",
+    },
+    name: { marginRight: 0, width: "50%", textAlign: "center" },
+    inputContainer: {
+      flex: 1,
+      flexDirection: "row",
+      justifyContent: "flex-end",
+    },
     input: {
       width: 35,
       borderWidth: 1,
@@ -33,20 +44,24 @@ const Exercise: React.FC<InputProps> = ({ name, increase }) => {
       userSelect: "none",
       textAlign: "center",
       color: "black",
+      marginLeft: 4,
+      marginRight: 4,
     },
     arrowToAdjustValue: { userSelect: "none", fontSize: 24 },
   });
   return (
     <View style={styles.container}>
       <Text style={styles.name}>{name}</Text>
-      <AnimatedButton iconToDisplay="◀" handleValue={decreaseValue} />
-      <TextInput
-        style={styles.input}
-        readOnly={true}
-        selectTextOnFocus={false}
-        value={value.toString()}
-      />
-      <AnimatedButton iconToDisplay="▶" handleValue={increaseValue} />
+      <View style={styles.inputContainer}>
+        <AnimatedButton iconToDisplay="◀" handleValue={decreaseValue} />
+        <TextInput
+          style={styles.input}
+          readOnly={true}
+          selectTextOnFocus={false}
+          value={value.toString()}
+        />
+        <AnimatedButton iconToDisplay="▶" handleValue={increaseValue} />
+      </View>
     </View>
   );
 };
